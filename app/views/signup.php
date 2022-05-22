@@ -1,20 +1,17 @@
-<a class=" text-light" href="<?= createLink("/") ?>">Home</a>
-<br>
-<br>
-<a class=" text-light" href="<?= createLink("/login") ?>">Login</a>
-<br>
-<br>
-<a class=" text-light" href="<?= createLink("/signup") ?>">Register</a>
-<br>
-<br>
+<?php
+require_once dirname(__DIR__) . "/views/components/header.php";
+// var_dump(dirname(__DIR__));
+?>
 
-<div class="row min-vh-100 align-content-center justify-content-center">
+<link rel="stylesheet" href="css/style.css">
+
+<div class="row min-vh-100 align-content-center justify-content-center" style="margin-top: 100px;">
     <div class="card align-items-center w-50 p-0">
         <div class="card-header text-center bg-primary w-100">
             <h2 class=" text-white">Sign Up</h2>
         </div>
         <div class="card-body w-100">
-            <form class="d-flex flex-column" method="POST">
+            <form action="http://localhost/dentiste/signup/create" class="d-flex flex-column" method="POST">
                 <div class="mb-3">
                     <label class="form-label">Full Name</label>
                     <input type="text" name="full_name" class="form-control">
@@ -46,3 +43,8 @@
         </div>
     </div>
 </div>
+
+
+<?php
+require_once dirname(__DIR__) . "/views/components/footer.php";
+?>

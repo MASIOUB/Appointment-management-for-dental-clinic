@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800;900&display=swap');
+
+body{
+    font-family: "Roboto", sans-serif;
+    line-height: 1.8;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 800 !important;
+}
+
+a{
+    text-decoration: none;
+    transition: all 0.4s ease;
+    font-weight: 800;
+}
+
+.navbar{
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    background: #081f3e;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color: white;
+}
+
+section{
+    padding: 80px 0;
+    z-index: 2;
+    position: relative;
+}
+
+.bg-cover{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .title{
+    color: linear-gradient(rgb(25, 189, 206),rgba(2, 93, 103));
+} */
+
+.btn{
+    padding: 14px 22px;
+    transition: all 0.3s ease;
+}
+
+.btn-cancel{
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-edit{
+    background-color: #077bd4;
+    border-color: #077bd4 ;
+}
+
+.btn-main{
+    background:  linear-gradient(to left, #164F64, #83B4E8);
+    border-radius: 100px;
+    border: none;
+    font-weight: 600;
+    color: #fff;
+}

@@ -19,16 +19,15 @@ class LoginController
     {
         if (isPostRequest() && verify(["ref"], $_POST)) {
             $patient = $this->patientModel->fetchOne("WHERE ref = :ref", ["ref" => $_POST["ref"]]);
-            echo json_encode($patient);
+            // json_encode($patient);
 
 
-            // if ($patient )
-            createUserSession($patient);
-            return redirect("/appointment");
-        }
-         else {
-            return view("login");
+            if ($patient) {
+                createPatientSession($patient);
+                return redirect("/");
+            } else {
+                return view("login");
+            }
         }
     }
-
 }

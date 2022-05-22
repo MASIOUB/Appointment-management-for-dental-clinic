@@ -20,6 +20,13 @@ class Model
         return $statment->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function join($columns = ["*"], $joiture = "" ,$data = [])
+    {
+        $statement = $this->connection->prepare("SELECT $columns FROM $this->tableName $joiture");
+        $statement->execute($data);
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function create($data)
     {
         $keys = array_keys($data);

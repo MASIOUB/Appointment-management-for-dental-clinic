@@ -57,7 +57,7 @@ function isLoggedIn()
     return isset($_SESSION["ref"]) && !empty($_SESSION["ref"]);
 }
 
-function createUserSession($patient)
+function createPatientSession($patient)
 {
     if (!isset($_SESSION)) {
         session_start();

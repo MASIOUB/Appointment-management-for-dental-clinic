@@ -16,19 +16,25 @@ class SignupController
 
     public function index()
     {
+        view('signup');
+    }
+
+    public function create()
+    {
         if (isPostRequest()) {
             $patientRef = generateRandomString();
             $data = ['ref' => $patientRef,...$_POST];
 
-            $patient = $this->patientModel->create($_POST);
-            return json($patient);
+            $patient = $this->patientModel->create($data);
+            // return json($patient);
 
-            // if ($patient) {
-            //     return redirect("/");
-            // }
-        // } else {
-        //     // return view("signup");
-        //     // echo 'patient not inserted';
+            if ($patient) {
+                createPatientSession($patient);
+                return redirect("/");
+            }
+        } else {
+            return view("signup");
+            // echo 'patient not inserted';
         }
 
 
