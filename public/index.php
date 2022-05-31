@@ -4,6 +4,8 @@ require_once dirname(__DIR__) . "/app/configs/index.php";
 require_once "autoload.php";
 
 
+date_default_timezone_set('Africa/casablanca');
+
 $params = ["home"];
 
 if (isset($_GET["url"])) {

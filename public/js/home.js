@@ -15,11 +15,10 @@
 fetch("http://localhost/dentiste/home/history")
     .then(response => response.json())
     .then((data) => {
-        console.log(data) 
+        // console.log(data)
         // console.log(data[0].id);
         const appointmentList = document.querySelector("#appointment");
-        for (const rdv in data)
-        {
+        for (const rdv in data) {
             const appointment = document.createElement('tr');
             appointmentList.appendChild(appointment);
             const action = document.createElement('td');
@@ -49,4 +48,28 @@ fetch("http://localhost/dentiste/home/history")
             appointment.appendChild(time);
         }
     })
+
+// fetch("http://localhost/dentiste/home/allAppointments")
+//     .then(response => response.json())
+//     .then((data) => {
+//         console.log(data)
+        // const timeslot = document.querySelector('#timeslot');
+        // const date = document.querySelector('#date');
+        // date.addEventListener('change', displayExistTimeslots);
+
+        // function displayExistTimeslots(e){
+        //     let dateCase = 0;
+        //     for (const rdv in data)
+        //     {
+
+        //     }
+        // let time = 0;
+        // </?php foreach ($timeslots as $timeslot) : ?>
+        // </?php foreach ($appointments as $appointment) : ?>
+        // if ($timeslot['id] == $appointment['timeslot_id'])
+        // time = 1;
+        // endif;
+        // endforeach;
+
+    // })
 

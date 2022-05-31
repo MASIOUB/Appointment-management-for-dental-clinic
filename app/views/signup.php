@@ -6,7 +6,7 @@ require_once dirname(__DIR__) . "/views/components/header.php";
 <link rel="stylesheet" href="css/style.css">
 
 <div class="row min-vh-100 align-content-center justify-content-center" style="margin-top: 100px;">
-    <div class="card align-items-center w-50 p-0">
+    <div class="card align-items-center col-lg-6 col-md-8 col-sm-10 col-11 p-0">
         <div class="card-header text-center bg-primary w-100">
             <h2 class=" text-white">Sign Up</h2>
         </div>

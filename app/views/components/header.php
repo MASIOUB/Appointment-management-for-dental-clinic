@@ -14,7 +14,14 @@
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+
     <title>Dentiste</title>
+    <style>
+        #timeslot option{
+             color: black;
+        }
+    </style>
 </head>
 
 <body>

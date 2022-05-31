@@ -19,9 +19,7 @@
                     </li>
                     <?php endif;
                     if (isLoggedIn()) : ?>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= createLink("/appointment") ?>">Appointment</a>
-                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="<?= createLink("/logout") ?>">Logout</a>
                     </li>

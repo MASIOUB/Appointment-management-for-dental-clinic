@@ -7,6 +7,47 @@ class Model
     protected $tableName;
     // protected $joinTable;
 
+
+/**
+     * get times which possible to get.
+     *
+     * @param date $dt
+     */
+    public function getTimesR($dt , $id_time)
+    {
+
+          $query = "SELECT * FROM appointments where date = '$dt' and timeslot_id = $id_time";
+          $query = $this->connection->prepare($query);
+          if($query->execute() && $query->rowCount()>0):
+                return $query->rowCount();
+          else:
+                return false;
+          endif;
+
+    }
+/**
+     * get time which possible to get.
+     *
+     * @param id $id_time
+     */
+    public function getTime($id_time)
+    {
+
+          $query = "SELECT time FROM timeslots where id like $id_time";
+          $query = $this->connection->prepare($query);
+          if($query->execute() && $query->rowCount()>0):
+                return $query->fetch(PDO::FETCH_ASSOC);
+          else:
+                return false;
+          endif;
+
+    }
+
+
+
+
+    // ---------------------------------------------------------
+
     public function __construct()
     {
         $this->connection = new PDO("mysql:host=localhost;dbname=dentiste", "root", "");
